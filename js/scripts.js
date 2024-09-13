@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-const palabraFija = "Desarrollador Full Stack";
+const palabraFija = "Analista de Sistemas y Tecnologías";
 let palabraDinamica = "";
 let index = 0;
 
@@ -80,7 +80,7 @@ function borrarPalabraDinamica() {
 
 // dinamica
 function escribirPalabraDinamica() {
-  const palabraCompleta = " Desarrollador Full Stack";
+  const palabraCompleta = " Analista de Sistemas y Tecnologías";
   let j = 0;
 
   const escribirInterval = setInterval(() => {
