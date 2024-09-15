@@ -17,7 +17,6 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand">Juan Camilo Valderrama</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-success text-white rounded" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -39,24 +38,57 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead bg-success text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/fotoCamilo.jpg" alt="..." />
-            <!-- Masthead Heading-->
-            <h1 class="masthead-heading mb-0" id="output"></h1>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-light">
-                <div class="divider-custom-line"></div>
+    <header class="masthead bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna del Texto -->
+                <div class="col-md-8" style="padding-left: 0; margin-left: 0;">
+                    <!-- Nombre Principal -->
+                    <h1 class="masthead-heading text-uppercase font-weight-bold">JUAN CAMILO VALDERRAMA</h1>
+                    <!-- Subtítulo/Posición -->
+                    <p class="masthead-subheading font-weight-light text-uppercase mb-3" 
+   style="border-bottom: 2px solid #1d6496; padding-bottom: 5px;">
+   Analista de Sistemas y Tecnologías
+</p>
+
+                    <!-- Descripción Personal con salto de línea después de cada punto -->
+                    <p class="masthead-subheading font-weight-light mb-0 text-justify" style="text-align: justify;">
+                        Desarrollador y analista en sistemas con 2 años de experiencia en el <br>
+                        análisis y desarrollo de soluciones tecnológicas. Poseo habilidades <br>
+                        destacadas en el trabajo en equipo, demostrando colaboración <br>
+                        efectiva. Soy una persona autodidacta con facilidad de aprendizaje <br>
+                        continuo.
+                    </p>
+                </div>
+    
+                <!-- Columna de la Imagen -->
+                <div class="col-md-4 text-center">
+                    <img class="rounded-circle pulse" src="assets/img/fotoCamilo.jpg" alt="Foto Camilo" 
+                         style="width: 250px; height: 250px; object-fit: cover;" />
+                </div>
+                
+                <style>
+                    .pulse {
+                        animation: pulseAnimation 2s infinite;
+                    }
+                
+                    @keyframes pulseAnimation {
+                        0% {
+                            transform: scale(1);
+                        }
+                        50% {
+                            transform: scale(1.05);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                </style>
+                
             </div>
-            <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">
-                Desarrollador y analista en sistemas con 2 años de experiencia en el análisis y desarrollo de soluciones
-                tecnológicas. Poseo habilidades destacadas en el trabajo en equipo, demostrando colaboración efectiva.
-                Soy una persona autodidacta con facilidad de aprendizaje continuo
-            </p>
         </div>
-    </header>
+    </header>    
+    
     <!-- experiencia Section-->
     <section class="page-section experiencia" id="experiencia">
         <div class="container">
@@ -70,69 +102,68 @@
             <div class="row justify-content-center">
                 <!-- experiencia Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="experiencia-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienciaModal1">
+                    <div>
                         <div
                             class="experiencia-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="experiencia-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid"
-                            src="https://admin.catalogodesoftware.com/UserFiles/gen_files/multimedia/imagenes/empresa/logo_cizaro.jpg"
-                            alt="..." />
+                        <label for="" class="h6">CIZARO</label>
                     </div>
                     <div class="card-footer">
                         <a href="https://cizaro.com/es" target="_blank"><button type="button"
                                 class="btn btn-secondary">Visitar Sitio</button></a>
+                    <button type="button" class="experiencia-item mx-auto btn btn-secondary" data-bs-toggle="modal" data-bs-target="#experienciaModal1">Detalles</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="experiencia-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienciaModal3">
+                    <div>
                         <div
                             class="experiencia-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="experiencia-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/spi.png" alt="..." />
+                        <label for="" class="h6">S.P.I SOLUCIONES</label>
                     </div>
                     <div class="card-footer">
                         <a href="https://www.spisoluciones.com/website/index.html" target="_blank"><button type="button"
                                 class="btn btn-secondary">Visitar Sitio</button></a>
+                        <button type="button" class="experiencia-item mx-auto btn btn-secondary" data-bs-toggle="modal" data-bs-target="#experienciaModal3">Detalles</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="experiencia-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienciaModal2">
+                    <div>
                         <div
                             class="experiencia-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="experiencia-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNLPKq4OjlK0Bb8mMfAObaoYsMdksqyWSHg&s"
-                            alt="..." />
+                        <label for="" class="h6">CENSA</label>
                     </div>
                     <div class="card-footer">
                         <a href="https://www.censa.edu.co/sitio/inicio" target="_blank">
                             <button type="button" class="btn btn-secondary">Visitar Sitio
                             </button>
                         </a>
+                        <button type="button" class="experiencia-item mx-auto btn btn-secondary" data-bs-toggle="modal" data-bs-target="#experienciaModal4">Detalles</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-0">
-                    <div class="experiencia-item mx-auto" data-bs-toggle="modal" data-bs-target="#experienciaModal4">
+                    <div>
                         <div
                             class="experiencia-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="experiencia-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid"
-                        src="https://ii.ct-stc.com/1/logos/empresas/2021/01/19/d38bc1e5ef094327902a140530922thumbnail.jpg"
-                            alt="..." />
+                        <label for="" class="h6">INTEGRAL V6</label>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="experiencia-item mx-auto btn btn-secondary" data-bs-toggle="modal" data-bs-target="#experienciaModal2">Detalles</button>
+
                     </div>
                 </div>
 
                 <div class=" mt-5">
-                    <br>
-                    <br>
                     <br>
                     <br>
                     <br>
@@ -191,7 +222,7 @@
     <section class="page-section bg-success text-white mb-0" id="about">
         <div class="container">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-white">habilidades Técnicas</h2>
+            <h2 class="page-section-heading text-center text-white">Habilidades Técnicas</h2>
             <br>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
@@ -287,7 +318,7 @@
                     <br>
                     <br>
                     <br>
-                    <h4 class="" id="contact">Contacto</h4>
+                    <h4 class="mb-4" id="contact">Contacto</h4>
                     <a class="btn btn-outline-light btn-social mx-1" href="https://wa.me/3235062841" target="_blank"><i
                             class="fab fa-fw fa-whatsapp"></i></a>
                     <a class="btn btn-outline-light btn-social mx-1"
@@ -297,17 +328,18 @@
                     <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/juancaval26"
                         target="_blank"><i class="fab fa-fw fa-github"></i></a>
                 </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white">
-        <h4 class="text-uppercase mb-4">Agradecimiento</h4>
-        <p class="lead mb-0">
+                                <!-- Copyright Section-->
+    <div class=" text-center text-white">
+        <br>
+        <br>
+        <p class="lead">
             MIT licensed Bootstrap theme created by.
         </p>
         <div class="container"><small>Copyright &copy; Your Website 2021</small></div>
     </div>
+            </div>
+        </div>
+    </footer>
     <!-- experiencia Modals-->
     <div class="experiencia-modal modal fade" id="experienciaModal1" tabindex="-1" aria-labelledby="experienciaModal1"
         aria-hidden="true">
