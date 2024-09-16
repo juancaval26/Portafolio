@@ -49,3 +49,69 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.addEventListener('keydown', function(event) {
+    // F12
+    if (event.code === 'F12') {
+        event.preventDefault();
+    }
+    // Ctrl + Shift + I or Ctrl + Shift + C or Ctrl + Shift + J (Inspect, Console, Sources)
+    if (event.ctrlKey && event.shiftKey && ['KeyI', 'KeyC', 'KeyJ'].includes(event.code)) {
+        event.preventDefault();
+    }
+    // Ctrl + U (View Page Source)
+    if (event.ctrlKey && event.code === 'KeyU') {
+        event.preventDefault();
+    }
+});
+
+
+// Deshabilitar clic derecho
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+
+(function() {
+    let devtoolsOpen = false;
+    const threshold = 160;
+
+    function detectDevTools() {
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+
+        if (widthThreshold || heightThreshold) {
+            if (!devtoolsOpen) {
+                devtoolsOpen = true;
+                // Recargar la página al detectar las herramientas de desarrollo
+                window.location.reload();
+            }
+        } else {
+            devtoolsOpen = false;
+        }
+    }
+
+    window.addEventListener('resize', detectDevTools);
+    window.addEventListener('load', detectDevTools);
+})();
+
+// Detecta cuando se intenta imprimir desde las opciones del navegador
+window.addEventListener('beforeprint', function (event) {
+    location.reload(); // Recarga la página inmediatamente
+});
+
+// Bloquea las combinaciones de teclas Ctrl + P y Cmd + P
+document.addEventListener('keydown', function (event) {
+    // Para Windows/Linux (Ctrl + P)
+    if (event.ctrlKey && event.key === 'p') {
+        event.preventDefault();
+    }
+
+    // Para macOS (Cmd + P)
+    if (event.metaKey && event.key === 'p') {
+        event.preventDefault();
+    }
+});
+
+
+
