@@ -114,4 +114,41 @@ document.addEventListener('keydown', function (event) {
 });
 
 
+const apiKey = '527bfe45867eab87385476958c93ca98';
+const city = 'Medellín'; 
 
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`;
+
+// Elementos del DOM
+const cityName = document.getElementById('city-name');
+const weatherDescription = document.getElementById('weather-description');
+const temperature = document.getElementById('temperature');
+const body = document.body;
+
+// Función para obtener datos del clima y aplicar efectos
+function getWeather() {
+    axios.get(apiUrl)
+        .then(response => {
+            const data = response.data;
+            const weatherMain = data.weather[0].main; // Ej: Rain, Clear, Snow, etc.
+            const description = data.weather[0].description;
+            const temp = data.main.temp;
+
+            cityName.textContent = data.name;
+            weatherDescription.textContent = description.charAt(0).toUpperCase() + description.slice(1);
+            temperature.textContent = `${temp}°C`;
+
+        })
+        .catch(error => {
+            console.error('Error al obtener los datos del clima:', error);
+            cityName.textContent = 'Error';
+            weatherDescription.textContent = 'No se pudo obtener el clima';
+            temperature.textContent = '';
+        });
+}
+
+// Ejecuta la función al cargar la página
+document.addEventListener('DOMContentLoaded', getWeather);
+
+// Actualiza el clima cada 10 minutos
+setInterval(getWeather, 600000); // 600,000 ms = 10 minutos
